@@ -1,0 +1,55 @@
+body {
+	background: url(../images/bg.png) repeat scroll center top;
+	overflow-x: hidden;
+}
+
+.login-table {
+	margin: auto;
+	color: #aaa;
+	font-size: 12px;
+}
+
+.container {
+	/* Overriding container css */
+	margin: 0px !important;
+	padding-left: 20px !important;
+	box-sizing: border-box;
+}
+
+/*** Footer ***/
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	height: 40px;
+	width: 100%;
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+}
+
+#footer-text {
+	position: relative;
+	width: 435px;
+	text-align: center;
+	left: 50%;
+	margin-left: -218px;
+}
+
+#footer-list {
+	position: relative;
+	list-style-type: none;
+	width: 346px;
+	margin: auto;
+}
+
+#footer-list li {
+	vertical-align: middle;
+	float: left;
+	text-align: center;
+	border-left: 1px solid #aaa;
+	padding: 0px 7px;
+}
+
+#footer-list li:first-child {
+	border-left: none;
+}
