@@ -44,57 +44,65 @@
 
         <body>
 
-        <table style="margin:auto" cellspacing="0" cellpadding="0">
-        <tr>
-        <td align="left"><img src="images/logo.gif" alt="Site Logo" border=0></td>
-        </tr>
-        </table>
+		<div id="login-container">
+			<img src="images/logo.gif" alt="Site Logo" id="login-logo">
 
-        <table class="login-table" cellspacing="5" cellpadding="5">
-			<tr>
-				<td class="login-table" align="center">
-					<p id="login-welcome">
-						{$g_lang_welcome}<br>
-						{$g_lang_welcome2}
-					</p>
-				</td>
-			</tr>
-			<tr>
-				<td class="login-table" align="center">
-					<table border="0" cellspacing="5" cellpadding="5">
-						<form action="index.php" method="post">
-            {if $redirection}
-                <input type="hidden" name="redirection" value="{$redirection}">
-            {/if}
-            
-         <tr>
-        <td>{$g_lang_username}</td>
-        <td><input type="Text" name="frmuser" size="15"></td>
-        </tr>
-        <tr>
-        <td>{$g_lang_password}</td>
-        <td><input type="password" name="frmpass" size="15">
-            {if $g_allow_password_reset eq 'True'}
-                <a href="{$g_base_url}/forgot_password.php">{$g_lang_forgotpassword}</a>
-             {/if}
-                     </td>
-        </tr>
-        <tr>
-        <td colspan="2" align="center"><input type="submit" name="login" value="{$g_lang_enter}"></td>
-        </tr>
-                </tr>
-                {if $g_demo eq 'True'}
-        Regular User: <br />Username:demo Password:demo<br />
-        Admin User: <br />Username:admin Password:admin<br />
-        {/if}
-        {if $g_allow_signup eq 'True'}
-                <tr>
-            <td colspan="2"><a href="{$g_base_url}/signup.php">{$g_lang_signup}</a>
-        </tr>
-        {/if}
-        
-        </form>
-        </table>
-        </td>
-        </tr>
-        </table>
+			<div id="ribbon">
+				<span id="ribbon-content">
+					{$g_lang_welcome}<br>
+					{$g_lang_welcome2}
+				</span>
+			</div>
+
+			<form action="index.php" method="post" id="login-form">
+				<table id="login-table">
+					<tbody>
+						{if $redirection}
+							<tr>
+							<td>
+								<input type="hidden" name="redirection" value="{$redirection}">
+							</td>
+							</tr>
+						{/if}
+						<tr>
+							<td><label for="frmuser">{$g_lang_username}</label></td>
+							<td><input type="Text" name="frmuser" size="15"></td>
+						</tr>
+						<tr>
+							<td><label for="frmpass">{$g_lang_password}</label></td>
+							<td>
+								<input type="password" name="frmpass" size="15">
+								{if $g_allow_password_reset eq 'True'}
+									<a href="{$g_base_url}/forgot_password.php">{$g_lang_forgotpassword}</a>
+								{/if}
+							</td>
+						</tr>
+						<!--<tr>
+							<td>
+							<input type="submit" name="login" value="{$g_lang_enter}">
+							</td>
+						</tr>
+						{if $g_demo eq 'True'}
+							<tr>
+								<td>
+									Regular User: <br />Username:demo Password:demo<br />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Admin User: <br />Username:admin Password:admin<br />
+								</td>
+							</tr>
+						{/if}
+						{if $g_allow_signup eq 'True'}
+							<tr>
+								<td>
+									<a href="{$g_base_url}/signup.php">{$g_lang_signup}</a>
+								</td>
+							</tr>
+						{/if}-->
+					</tbody>
+				</table>
+				<input id="login-submit" type="submit" name="login" value="{$g_lang_enter}">
+			</form>
+		</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-06 08:05:21
+<?php /* Smarty version 2.6.26, created on 2013-08-14 13:14:53
          compiled from login.tpl */ ?>
         <html>
         <head>
@@ -60,67 +60,76 @@ unset($_smarty_tpl_vars);
 
         <body>
 
-        <table style="margin:auto" cellspacing="0" cellpadding="0">
-        <tr>
-        <td align="left"><img src="images/logo.gif" alt="Site Logo" border=0></td>
-        </tr>
-        </table>
+		<div id="login-container">
+			<img src="images/logo.gif" alt="Site Logo" id="login-logo">
 
-        <table class="login-table" cellspacing="5" cellpadding="5">
-			<tr>
-				<td class="login-table" align="center">
-					<p id="login-welcome">
-						<?php echo $this->_tpl_vars['g_lang_welcome']; ?>
+			<div id="ribbon">
+				<span id="ribbon-content">
+					<?php echo $this->_tpl_vars['g_lang_welcome']; ?>
 <br>
-						<?php echo $this->_tpl_vars['g_lang_welcome2']; ?>
+					<?php echo $this->_tpl_vars['g_lang_welcome2']; ?>
 
-					</p>
-				</td>
-			</tr>
-			<tr>
-				<td class="login-table" align="center">
-					<table border="0" cellspacing="5" cellpadding="5">
-						<form action="index.php" method="post">
-            <?php if ($this->_tpl_vars['redirection']): ?>
-                <input type="hidden" name="redirection" value="<?php echo $this->_tpl_vars['redirection']; ?>
+				</span>
+			</div>
+
+			<form action="index.php" method="post" id="login-form">
+				<table id="login-table">
+					<tbody>
+						<?php if ($this->_tpl_vars['redirection']): ?>
+							<tr>
+							<td>
+								<input type="hidden" name="redirection" value="<?php echo $this->_tpl_vars['redirection']; ?>
 ">
-            <?php endif; ?>
-            
-         <tr>
-        <td><?php echo $this->_tpl_vars['g_lang_username']; ?>
-</td>
-        <td><input type="Text" name="frmuser" size="15"></td>
-        </tr>
-        <tr>
-        <td><?php echo $this->_tpl_vars['g_lang_password']; ?>
-</td>
-        <td><input type="password" name="frmpass" size="15">
-            <?php if ($this->_tpl_vars['g_allow_password_reset'] == 'True'): ?>
-                <a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
+							</td>
+							</tr>
+						<?php endif; ?>
+						<tr>
+							<td><label for="frmuser"><?php echo $this->_tpl_vars['g_lang_username']; ?>
+</label></td>
+							<td><input type="Text" name="frmuser" size="15"></td>
+						</tr>
+						<tr>
+							<td><label for="frmpass"><?php echo $this->_tpl_vars['g_lang_password']; ?>
+</label></td>
+							<td>
+								<input type="password" name="frmpass" size="15">
+								<?php if ($this->_tpl_vars['g_allow_password_reset'] == 'True'): ?>
+									<a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /forgot_password.php"><?php echo $this->_tpl_vars['g_lang_forgotpassword']; ?>
 </a>
-             <?php endif; ?>
-                     </td>
-        </tr>
-        <tr>
-        <td colspan="2" align="center"><input type="submit" name="login" value="<?php echo $this->_tpl_vars['g_lang_enter']; ?>
-"></td>
-        </tr>
-                </tr>
-                <?php if ($this->_tpl_vars['g_demo'] == 'True'): ?>
-        Regular User: <br />Username:demo Password:demo<br />
-        Admin User: <br />Username:admin Password:admin<br />
-        <?php endif; ?>
-        <?php if ($this->_tpl_vars['g_allow_signup'] == 'True'): ?>
-                <tr>
-            <td colspan="2"><a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
+								<?php endif; ?>
+							</td>
+						</tr>
+						<!--<tr>
+							<td>
+							<input type="submit" name="login" value="<?php echo $this->_tpl_vars['g_lang_enter']; ?>
+">
+							</td>
+						</tr>
+						<?php if ($this->_tpl_vars['g_demo'] == 'True'): ?>
+							<tr>
+								<td>
+									Regular User: <br />Username:demo Password:demo<br />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Admin User: <br />Username:admin Password:admin<br />
+								</td>
+							</tr>
+						<?php endif; ?>
+						<?php if ($this->_tpl_vars['g_allow_signup'] == 'True'): ?>
+							<tr>
+								<td>
+									<a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /signup.php"><?php echo $this->_tpl_vars['g_lang_signup']; ?>
 </a>
-        </tr>
-        <?php endif; ?>
-        
-        </form>
-        </table>
-        </td>
-        </tr>
-        </table>
+								</td>
+							</tr>
+						<?php endif; ?>-->
+					</tbody>
+				</table>
+				<input id="login-submit" type="submit" name="login" value="<?php echo $this->_tpl_vars['g_lang_enter']; ?>
+">
+			</form>
+		</div>

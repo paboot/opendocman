@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-06 08:25:38
+<?php /* Smarty version 2.6.26, created on 2013-08-14 13:27:01
          compiled from header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
     <link href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/tweeter/css/tweeter.css" rel="stylesheet">
 	
-	<!-- Design by Pabot -->
+	<!-- Design by Pabot and Fandi-->
 	<link href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /css/main.css" rel="stylesheet">
 	
