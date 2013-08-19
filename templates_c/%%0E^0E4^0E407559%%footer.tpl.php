@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-06 08:40:52
+<?php /* Smarty version 2.6.26, created on 2013-08-17 12:33:43
          compiled from footer.tpl */ ?>
 <?php if ($this->_tpl_vars['g_demo'] == 'True'): ?>
 <script type="text/javascript"><!--
@@ -21,7 +21,7 @@
 " alt="<?php echo $this->_tpl_vars['site_title']; ?>
 " border="0">
             </a>-->
-        <span id="footer-text">Copyright &copy; 2000-2013 Stephen Lawrence. Design by Pabot & Fandi</span>
+        <span id="footer-text">Copyright &copy; 2000-2013 Stephen Lawrence. Design by pdf</span>
         <ul id="footer-list">
 			<li><a href="http://www.opendocman.com/" target="_new">OpenDocMan v<?php echo $this->_tpl_vars['g_current_version']; ?>
 </a></li>

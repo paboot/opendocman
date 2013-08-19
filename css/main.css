@@ -132,6 +132,10 @@ body {
 	box-shadow: inset 0px 3px 1px rgba(210, 117, 0, 0.9);
 }
 
+table td {
+	border-left: 1px solid #ccc;
+}
+
 /* Overriding container css */
 .container {
 	margin: 0px !important;
@@ -157,7 +161,7 @@ footer {
 	width: 435px;
 	text-align: center;
 	left: 50%;
-	margin-left: -218px;
+	margin-left: -182px;
 }
 
 #footer-list {
