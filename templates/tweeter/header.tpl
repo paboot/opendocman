@@ -82,6 +82,7 @@
 {if $g_demo eq 'True'}
     <h1>Demo resets once per hour</h1>
 {/if}
+	<div class="container-wrapper">
       <div class="container">
         <div class="row">
             <div class="span4">

@@ -72,12 +72,12 @@ if(!isset($_GET['submit']))
             </tr>
 
             <tr>
-                <td><?php echo msg('label_exact_phrase');?>: <input type="checkbox" name="exact_phrase"></td>
-                <td><?php echo msg('label_case_sensitive'); ?><input type="checkbox" name="case_sensitivity"></td>
+                <td><input type="checkbox" name="exact_phrase"><?php echo msg('label_exact_phrase');?></td>
+                <td><input type="checkbox" name="case_sensitivity"><?php echo msg('label_case_sensitive'); ?></td>
             </tr>
             <tr>
                 <td>
-                    <div class="buttons"><button class="positive" type="Submit" name="submit" value="Search"><?php echo msg('search');?></button></div>
+                    <div class="buttons"><button class="positive" id="submit-button" type="Submit" name="submit" value="Search"><?php echo msg('search');?></button></div>
                 </td>
             </tr>
         </form>

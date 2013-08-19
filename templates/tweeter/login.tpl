@@ -103,6 +103,6 @@
 						{/if}-->
 					</tbody>
 				</table>
-				<input id="login-submit" type="submit" name="login" value="{$g_lang_enter}">
+				<input id="submit-button" type="submit" name="login" value="{$g_lang_enter}">
 			</form>
 		</div>

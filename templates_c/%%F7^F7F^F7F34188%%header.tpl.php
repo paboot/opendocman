@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-14 13:27:01
+<?php /* Smarty version 2.6.26, created on 2013-08-19 17:52:12
          compiled from header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,6 +116,7 @@ unset($_smarty_tpl_vars);
 <?php if ($this->_tpl_vars['g_demo'] == 'True'): ?>
     <h1>Demo resets once per hour</h1>
 <?php endif; ?>
+	<div class="container-wrapper">
       <div class="container">
         <div class="row">
             <div class="span4">

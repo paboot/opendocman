@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-17 12:33:43
+<?php /* Smarty version 2.6.26, created on 2013-08-19 17:52:12
          compiled from footer.tpl */ ?>
 <?php if ($this->_tpl_vars['g_demo'] == 'True'): ?>
 <script type="text/javascript"><!--
@@ -14,6 +14,7 @@
  </script>
 <?php endif; ?>
 	</div> <!-- /container -->   
+	</div> <!-- /container wrapper -->
       <footer>
           <!--<a href="http://www.opendocman.com/">
                 <img src="<?php echo $this->_tpl_vars['g_base_url']; ?>
@@ -34,3 +35,4 @@
 /templates/tweeter/js/bootstrap.min.js"></script>
 </body>
 </html>
+

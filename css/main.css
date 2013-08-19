@@ -1,5 +1,5 @@
 body {
-	/*background: url(../images/bg.png) repeat scroll center top;*/
+	background: url(../images/g.jpg) no-repeat fixed left top;
 	overflow-x: hidden;
 }
 
@@ -109,9 +109,8 @@ body {
 	left: 0px;
 }
 
-#login-submit {
+#submit-button, button {
 	height: 30px;
-	width: 70px;
 	line-height: 15px;
 	vertical-align: middle;
 	background: #ffa700;
@@ -123,11 +122,15 @@ body {
 	transition: all 0.2s ease-in-out;
 }
 
-#login-submit:hover {
+#submit-button {
+	width: 70px;
+}
+
+#submit-button:hover, button:hover {
 	background: #ffc400;
 }
 
-#login-submit:active {
+#submit-button:active, button:active {
 	background: #f09500;
 	box-shadow: inset 0px 3px 1px rgba(210, 117, 0, 0.9);
 }
@@ -136,17 +139,29 @@ body {
 	border-left: 1px solid #ccc;
 }
 
+input[type="checkbox"] {
+	margin: 0px 4px !important;
+}
+
 /* Overriding container css */
 .container {
 	margin: 0px !important;
 	padding-left: 20px !important;
 	box-sizing: border-box;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.container-wrapper {
+	max-height: calc(100% - 90px);
+	height: calc(100% - 90px);
+	overflow-y: auto;
 }
 
 /*** Footer ***/
 
 footer {
-	position: absolute;
+	position: fixed;
 	bottom: 10px;
 	height: 40px;
 	width: 100%;

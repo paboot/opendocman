@@ -12,6 +12,7 @@
  </script>
 {/if}
 	</div> <!-- /container -->   
+	</div> <!-- /container wrapper -->
       <footer>
           <!--<a href="http://www.opendocman.com/">
                 <img src="{$g_base_url}/images/logo.gif" title="{$site_title}" alt="{$site_title}" border="0">

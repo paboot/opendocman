@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-14 13:14:53
+<?php /* Smarty version 2.6.26, created on 2013-08-19 17:45:21
          compiled from login.tpl */ ?>
         <html>
         <head>
@@ -129,7 +129,7 @@ unset($_smarty_tpl_vars);
 						<?php endif; ?>-->
 					</tbody>
 				</table>
-				<input id="login-submit" type="submit" name="login" value="<?php echo $this->_tpl_vars['g_lang_enter']; ?>
+				<input id="submit-button" type="submit" name="login" value="<?php echo $this->_tpl_vars['g_lang_enter']; ?>
 ">
 			</form>
 		</div>

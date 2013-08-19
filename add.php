@@ -426,7 +426,7 @@ if(!isset($_POST['submit']))
     ?>
     <table>
         <tr>
-            <td colspan="3" align="center"><div class="buttons"><button class="positive" tabindex=7 type="Submit" name="submit" value="Add Document"><?php echo msg('submit')?></button></div></td>
+            <td colspan="3" align="center"><div class="buttons"><button class="positive" id="submit-button" tabindex=7 type="Submit" name="submit" value="Add Document"><?php echo msg('submit')?></button></div></td>
         </tr>
     <?php
     $query = "SELECT name, id FROM {$GLOBALS['CONFIG']['db_prefix']}department ORDER BY name";
