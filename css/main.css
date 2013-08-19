@@ -1,6 +1,5 @@
 body {
 	/*background: url(../images/bg.png) repeat scroll center top;*/
-	background: white;
 	overflow-x: hidden;
 }
 
@@ -144,11 +143,12 @@ body {
 
 footer {
 	position: absolute;
-	bottom: 10px;
+	bottom: 0px;
 	height: 40px;
 	width: 100%;
 	border-top: 1px solid #ddd;
 	padding-top: 10px;
+	background: white;
 }
 
 #footer-text {
