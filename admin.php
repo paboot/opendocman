@@ -44,12 +44,14 @@ if(!$user_obj->isAdmin())
 $last_message = (isset($_REQUEST['last_message']) ? $_REQUEST['last_message'] : '');
 draw_header(msg('label_admin'), $last_message);
 ?>
-    <table border="1" cellspacing="5" cellpadding="5" >
-        <th bgcolor ="#83a9f7"><font color="#FFFFFF"><?php echo msg('users')?></font></th><th bgcolor ="#83a9f7"><font color="#FFFFFF"><?php echo msg('label_department')?></font></th><th bgcolor ="#83a9f7"><font color="#FFFFFF"><?php echo msg('category')?></font></th><?php if($user_obj->isRoot()) echo '<th bgcolor ="#83a9f7"><font color="#FFFFFF">' . msg('file') . '</th></font>'; ?>
+    <table id="tes" border="1" cellspacing="5" cellpadding="5" >
+        <th bgcolor ="#FFA300"><font color="#FFFFFF"><?php echo msg('users')?></font></th><th bgcolor ="#FFA300"><font color="#FFFFFF"><?php echo msg('label_department')?></font></th><th bgcolor ="#FFA300"><font color="#FFFFFF"><?php echo msg('category')?></font></th><?php if($user_obj->isRoot()) echo '<th bgcolor ="#FFA300"><font color="#FFFFFF">' . msg('file') . '</th></font>'; ?>
         <?php
         if($user_obj->isRoot())
             udf_admin_header();
         ?>
+		<th bgcolor ="#FFA300"><font color="#FFFFFF"><?php echo msg('label_settings')?></font></th>
+		<th bgcolor ="#FFA300"><font color="#FFFFFF"><?php echo msg('adminpage_reports');?></font></th>
         <tr>
             <td>
                 <!-- User Admin -->
@@ -124,14 +126,9 @@ draw_header(msg('label_admin'), $last_message);
     </table>
 </td>
     <?php udf_admin_menu($secureurl); ?>
-</tr>
 
-<tr>
     <td>
-        <table>
-            <tr>
-                <th bgcolor ="#83a9f7"><font color="#FFFFFF"><?php echo msg('label_settings')?></font></th>
-            </tr>
+        <table border="0" valign="top">
             <tr>
                 <td><b><a href="<?php echo $secureurl->encode('settings.php?submit=update&state=' . ($_REQUEST['state']+1)); ?>"><?php echo msg('adminpage_edit_settings'); ?></a></b></td>
             </tr>
@@ -142,9 +139,6 @@ draw_header(msg('label_admin'), $last_message);
     </td>
      <td>
          <table>
-             <tr>
-                 <th bgcolor ="#83a9f7"><font color="#FFFFFF"><?php echo msg('adminpage_reports');?></font></th>
-             </tr>
              <tr>
                  <td><b><a href="<?php echo $secureurl->encode('access_log.php?submit=update&state=' . ($_REQUEST['state']+1)); ?>"><?php echo msg('adminpage_access_log');?></a></b></td>
              </tr>
@@ -164,7 +158,7 @@ if(is_array($GLOBALS['plugin']->getPluginsList()) && $user_obj->isRoot())
 {
     ?>
             <table border="1" cellspacing="5" cellpadding="5" >
-            <th bgcolor ="#83a9f7"><font color="#FFFFFF"><?php echo msg('label_plugins')?></font></th>
+            <th bgcolor ="#FFA300"><font color="#FFFFFF"><?php echo msg('label_plugins')?></font></th>
                 <tr>
                     <td>
             <?php

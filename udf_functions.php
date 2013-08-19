@@ -342,7 +342,7 @@ if ( !defined('udf_functions') )
 
     function udf_admin_header()
     {
-        echo '<th bgcolor ="#83a9f7"><font color="#FFFFFF">' .msg('label_user_defined_fields'). '</font></th>';
+        echo '<th bgcolor ="#FFA300"><font color="#FFFFFF">' .msg('label_user_defined_fields'). '</font></th>';
     }
 
     function udf_admin_menu($secureurl)
