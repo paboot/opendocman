@@ -132,7 +132,7 @@ body {
 	box-shadow: inset 0px 3px 1px rgba(210, 117, 0, 0.9);
 }
 
-table td {
+#filetable td {
 	border-left: 1px solid #ccc;
 }
 
@@ -147,12 +147,10 @@ table td {
 
 footer {
 	position: absolute;
-	bottom: 0px;
+	bottom: 10px;
 	height: 40px;
 	width: 100%;
-	border-top: 1px solid #ddd;
 	padding-top: 10px;
-	background: white;
 }
 
 #footer-text {
