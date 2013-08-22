@@ -7,13 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-
+    <!-- Styles -->
     <link href="{$g_base_url}/templates/tweeter/css/bootstrap.css" rel="stylesheet">
     <link href="{$g_base_url}/templates/tweeter/css/tweeter.css" rel="stylesheet">
+	<link href="{$g_base_url}/css/main.css" rel="stylesheet" media="screen">
 	
-	<!-- Design by Pabot and Fandi-->
-	<link href="{$g_base_url}/css/main.css" rel="stylesheet">
+	<!-- Javascript -->
+	<script type="text/javascript" src="{$g_base_url}/js/jquery.js"></script>
+	<script type="text/javascript" src="{$g_base_url}/js/admin.js"></script>
 	
     <style type="text/css">
         {literal}

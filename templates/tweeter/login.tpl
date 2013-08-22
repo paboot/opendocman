@@ -47,13 +47,6 @@
 		<div id="login-container">
 			<img src="images/logo.gif" alt="Site Logo" id="login-logo">
 
-			<div id="ribbon">
-				<span id="ribbon-content">
-					{$g_lang_welcome}<br>
-					{$g_lang_welcome2}
-				</span>
-			</div>
-
 			<form action="index.php" method="post" id="login-form">
 				<table id="login-table">
 					<tbody>
@@ -105,4 +98,11 @@
 				</table>
 				<input id="submit-button" type="submit" name="login" value="{$g_lang_enter}">
 			</form>
+			<br><br>
+			<div id="ribbon">
+				<span id="ribbon-content">
+					{$g_lang_welcome}<br>
+					{$g_lang_welcome2}
+				</span>
+			</div>
 		</div>
