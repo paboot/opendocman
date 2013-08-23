@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-21 17:07:15
+<?php /* Smarty version 2.6.26, created on 2013-08-23 18:14:32
          compiled from header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
+    <!-- Styles -->
     <link href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/tweeter/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo $this->_tpl_vars['g_base_url']; ?>
@@ -24,6 +24,8 @@
 /js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /js/admin.js"></script>
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>
+/js/menu.js"></script>
 	
     <style type="text/css">
         <?php echo '
@@ -45,7 +47,7 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="<?php echo $this->_tpl_vars['g_base_url']; ?>
-/templates/tweeter/images/favicon.ico">
+/images/favicon.png">
 
     <link rel="apple-touch-icon" href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/tweeter/images/apple-touch-icon.png">
@@ -80,7 +82,7 @@ unset($_smarty_tpl_vars);
           <div class="nav-collapse collapse">
             <ul class="nav">
 
-              <li class="active"><a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
+              <li><a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /out.php"><?php echo $this->_tpl_vars['g_lang_home']; ?>
 </a></li>
               <li><a href="<?php echo $this->_tpl_vars['g_base_url']; ?>

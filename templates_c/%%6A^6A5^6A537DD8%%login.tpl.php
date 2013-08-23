@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-19 17:45:21
+<?php /* Smarty version 2.6.26, created on 2013-08-23 18:08:59
          compiled from login.tpl */ ?>
         <html>
         <head>
@@ -37,7 +37,7 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="<?php echo $this->_tpl_vars['g_base_url']; ?>
-/templates/tweeter/images/favicon.ico">
+/images/favicon.png">
 
     <link rel="apple-touch-icon" href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/tweeter/images/apple-touch-icon.png">
@@ -61,8 +61,10 @@ unset($_smarty_tpl_vars);
         <body>
 
 		<div id="login-container">
-			<img src="images/bookthumb.png" alt="Site Logo" id="login-logo">
-			<img src="images/logo.png" alt="Site Logo" id="login-logo-font">
+			<div id="login-logo">
+				<img src="images/bookthumb.png" alt="Site Logo" id="login-logo-book">
+				<img src="images/logo.gif" alt="Site Logo" id="login-logo-name">
+			</div>
 
 			<form action="index.php" method="post" id="login-form">
 				<table id="login-table">
@@ -123,14 +125,15 @@ unset($_smarty_tpl_vars);
 				</table>
 				<input id="submit-button" type="submit" name="login" value="<?php echo $this->_tpl_vars['g_lang_enter']; ?>
 ">
-			</form>
-			<br>
-				<div id="ribbon">
-				<span id="ribbon-content">
-					<?php echo $this->_tpl_vars['g_lang_welcome']; ?>
+			</form><br><br>
+			<div id="ribbon">
+				<div id="ribbon-curve">
+					<span id="ribbon-content">
+						<?php echo $this->_tpl_vars['g_lang_welcome']; ?>
 <br>
-					<?php echo $this->_tpl_vars['g_lang_welcome2']; ?>
-
-				</span>
+						<!--<?php echo $this->_tpl_vars['g_lang_welcome2']; ?>
+-->
+					</span>
+				</div>
 			</div>
 		</div>

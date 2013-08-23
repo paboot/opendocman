@@ -1,39 +1,8 @@
-@CHARSET "ISO-8859-1";
-/************************
- 
-		  Fonts
- 
-*************************/
-@font-face
-{
-	font-family: Cabin;
-	src: url(fonts/Cabin-Regular.ttf);
-}
-
-@font-face
-{
-	font-family: Cabin;
-	font-weight: Bold;
-	src: url(fonts/Cabin-Bold.ttf);
-}
-
-@font-face
-{
-	font-family: Cabin;
-	font-weight: Medium;
-	src: url(fonts/Cabin-SemiBold.ttf);
-}
-
 body {
 	background: url(../images/g.png) no-repeat fixed left top;
 	overflow-x: hidden;
 }
 
-/************************
- 
-	   Login Page
- 
-*************************/
 #login-container {
 	display: block;
 	margin-top: 3%;
@@ -58,25 +27,92 @@ body {
 	margin-left:-20px;
 	height:80px;
 }
+/* asli
+#ribbon {
+	display: block;
+	padding: 5px 10px;
+	position: relative;
+	z-index: 2;
+	top: -10px;
+	width: 600px;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	background: #ffa700;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,.3),
+				inset 0px 0px 20px rgba(150,70,0,0.1),
+				0px 1px 1px rgba(150,70,0,0.1);
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+}
 
+#ribbon:before, #ribbon:after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: -1em;
+	/*border: 1.5em solid #ffa700;
+	z-index: -2;
+}
+
+#ribbon:before {
+	left: -2em;
+	-webkit-transform: rotate(16deg);
+	border-right-width: 1.5em;
+	border-left-color: transparent;
+}
+
+#ribbon:after {
+	right: -2em;
+	-webkit-transform: rotate(-16deg);
+	border-left-width: 1.5em;
+	border-right-color: transparent;
+}
+
+#ribbon-content:before, #ribbon-content:after {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	height: 0;
+	width: 0;
+	z-index: -1;
+}
+
+#ribbon-content:before {
+	left: 0px;
+	border-bottom: 1em solid #df6000;
+	border-left: 1em solid transparent;
+	border-top-left-radius: 480px 16px;
+    border-top-right-radius: 480px 16px;
+}
+
+#ribbon-content:after {
+	right: 0px;
+	border-bottom: 1em solid #df6000;
+	border-right: 1em solid transparent;
+	border-top-left-radius: 480px 16px;
+    border-top-right-radius: 480px 16px;
+}
+*/
 #ribbon {
     position: relative;
     width: 624px;
-	top: -41px;
+	top: -40px;
     padding: 0 16px;
     margin: auto;
 	z-index: 0;
 }
 
 #ribbon-curve {
-	border-radius: 0 0 300px 300px / 0 0 50% 50%;
+	border-radius: 0 0 300px 300px / 0 0 30px 30px;
 	/*-webkit-border-radius: 0 0 50% 50% / 0 0 50% 50%;
 	-moz-border-radius: 0 0 50% 50% / 0 0 50% 50%;*/
 	background-color: #42a5d4;
 	background-image: -webkit-linear-gradient(top, #42a5d4, #24769d);
 	text-align: center;
 	color: #fff;
-	height: 50px;
+	height: 80px;
 }
 
 #ribbon-content {
@@ -85,8 +121,7 @@ body {
 	height: 100%;
 	box-shadow: none;
 	box-sizing: border-box;
-	line-height: 50px;
-	text-shadow: 0px 1px 0px rgba(0,0,0,.8);
+	padding-top: 10px;
 }
 
 #ribbon-content:before, #ribbon-content:after {
@@ -99,13 +134,13 @@ body {
 
 #ribbon-content:before {
 	border: 0;
-	top: -50px;
+	top: -68px;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), 
 					  -webkit-linear-gradient(right, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
-	-webkit-background-size: 15px 50px, 15px 50px;
+	-webkit-background-size: 15px 80px, 15px 80px;
 	background-position: left top, right top;
 	background-repeat: no-repeat, no-repeat;
 	border-radius: 50% / 50%;
@@ -114,15 +149,107 @@ body {
 
 #ribbon-content:after {
 	border: 0;
-	top: -50px;
+	top: -80px;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	/*-webkit-border-radius: 0 0 50% 50% / 0 0 50% 50%;*/
-	border-radius: 0 0 300px 300px / 0 0 50% 50%;
-	box-shadow: 0 25px #42a5d4; /* Nilai 39 dari 80 (height) bagi 2 kurang 1 */
+	border-radius: 0 0 300px 300px / 0 0 30px 30px;
+	box-shadow: 0 39px #42a5d4; /* Nilai 39 dari 80 (height) bagi 2 kurang 1 */
 }
 
+/*
+#ribbon {
+    position: relative;
+    width: 600px;
+    padding: 0 16px;
+    margin: auto;
+}
+
+#ribbon:before, #ribbon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -24px;
+    /*border: 24px solid #4B8FC3;
+    z-index: -1;
+}
+
+#ribbon:before {
+    left: -38px;
+    border-right-width: 24px;
+    border-left-color: transparent;
+    -webkit-transform: rotate(-16deg);
+}
+
+#ribbon:after {
+    right: -38px;
+    border-left-width: 24px;
+    border-right-color: transparent;
+    -webkit-transform: rotate(16deg);
+}
+
+#ribbon-content {
+    display: block;
+    position: relative;
+    width: 100%;
+    left: -16px;
+    padding: 0 16px 16px;
+    background: #96BEDC;
+    border-bottom-left-radius: 16px 496px;
+    border-bottom-right-radius: 16px 496px;
+	text-align: center;
+	color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    z-index: 1;
+}
+
+#ribbon-content:before, #ribbon-content:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    left: 0;
+    bottom: 0;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .3);
+}
+
+#ribbon-content:before {
+    width: 100%;
+    background: #71A7D0;
+    border-top-left-radius: 496px 16px;
+    border-top-right-radius: 496px 16px;
+    z-index: 1;
+}
+
+#ribbon-content:after {
+    width: 600px;
+    left: 16px;
+    background: #eaeaea;
+    border-bottom-left-radius: 480px 16px;
+    border-bottom-right-radius: 480px 16px;
+    z-index: 2;
+}
+
+#ribbon b:before, #ribbon b:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    bottom: -16px;
+    z-index: 0;
+}
+#ribbon b:before {
+    left: 0;
+    border-color: transparent #71A7D0 transparent transparent;
+    border-width: 16px 16px 16px 0;
+}
+#ribbon b:after {
+    right: 0;
+    border-color: transparent transparent transparent #71A7D0;
+    border-width: 16px 0 16px 16px;
+}
+*/
 #login-form {
 	margin: auto;
 	margin-top: 20px;
@@ -131,7 +258,7 @@ body {
 	background: rgba(255,255,255,0.5);
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 	box-sizing: border-box;
-	border-radius: 10px 10px 300px 300px / 10px 10px 21px 21px;
+	border-radius: 10px 10px 300px 300px / 10px 10px 23px 23px;
 	text-align: center;
 	padding: 20px;
 	position: relative;

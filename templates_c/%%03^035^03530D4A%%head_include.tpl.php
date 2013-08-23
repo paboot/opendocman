@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-01 11:35:53
+<?php /* Smarty version 2.6.26, created on 2013-08-23 15:05:31
          compiled from ../../templates/common/head_include.tpl */ ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/common/css/system.css" />

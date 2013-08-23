@@ -28,7 +28,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="{$g_base_url}/templates/tweeter/images/favicon.ico">
+    <link rel="shortcut icon" href="{$g_base_url}/images/favicon.png">
 
     <link rel="apple-touch-icon" href="{$g_base_url}/templates/tweeter/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{$g_base_url}/templates/tweeter/images/apple-touch-icon-72x72.png">
@@ -45,7 +45,10 @@
         <body>
 
 		<div id="login-container">
-			<img src="images/logo.gif" alt="Site Logo" id="login-logo">
+			<div id="login-logo">
+				<img src="images/bookthumb.png" alt="Site Logo" id="login-logo-book">
+				<img src="images/logo.gif" alt="Site Logo" id="login-logo-name">
+			</div>
 
 			<form action="index.php" method="post" id="login-form">
 				<table id="login-table">
@@ -97,12 +100,13 @@
 					</tbody>
 				</table>
 				<input id="submit-button" type="submit" name="login" value="{$g_lang_enter}">
-			</form>
-			<br><br>
+			</form><br><br>
 			<div id="ribbon">
-				<span id="ribbon-content">
-					{$g_lang_welcome}<br>
-					{$g_lang_welcome2}
-				</span>
+				<div id="ribbon-curve">
+					<span id="ribbon-content">
+						{$g_lang_welcome}<br>
+						<!--{$g_lang_welcome2}-->
+					</span>
+				</div>
 			</div>
 		</div>

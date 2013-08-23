@@ -15,6 +15,7 @@
 	<!-- Javascript -->
 	<script type="text/javascript" src="{$g_base_url}/js/jquery.js"></script>
 	<script type="text/javascript" src="{$g_base_url}/js/admin.js"></script>
+	<script type="text/javascript" src="{$g_base_url}/js/menu.js"></script>
 	
     <style type="text/css">
         {literal}
@@ -32,7 +33,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="{$g_base_url}/templates/tweeter/images/favicon.ico">
+    <link rel="shortcut icon" href="{$g_base_url}/images/favicon.png">
 
     <link rel="apple-touch-icon" href="{$g_base_url}/templates/tweeter/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{$g_base_url}/templates/tweeter/images/apple-touch-icon-72x72.png">
@@ -59,7 +60,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
 
-              <li class="active"><a href="{$g_base_url}/out.php">{$g_lang_home}</a></li>
+              <li><a href="{$g_base_url}/out.php">{$g_lang_home}</a></li>
               <li><a href="{$g_base_url}/in.php">{$g_lang_button_check_in}</a></li>
               <li><a href="{$g_base_url}/search.php">{$g_lang_search}</a></li>
               <li><a href="{$g_base_url}/add.php">{$g_lang_button_add_document}</a></li>
