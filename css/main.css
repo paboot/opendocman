@@ -1,5 +1,5 @@
 body {
-	background: url(../images/g.jpg) no-repeat fixed left top;
+	background: url(../images/g.png) no-repeat fixed left top;
 	overflow-x: hidden;
 }
 
@@ -10,8 +10,16 @@ body {
 
 #login-logo {
 	position: relative;
-	display: block;
+	/*display: block;*/
 	margin: auto;
+	height: 90px;
+	width:90px;
+	padding-left: 550px;
+}
+
+#login-logo-font{
+	margin-left:-20px;
+	height:80px;
 }
 
 #ribbon {
@@ -36,7 +44,7 @@ body {
 	position: absolute;
 	display: block;
 	top: -1em;
-	border: 1.5em solid #ffa700;
+	/*border: 1.5em solid #ffa700;*/
 	z-index: -2;
 }
 
@@ -113,11 +121,11 @@ body {
 	height: 30px;
 	line-height: 15px;
 	vertical-align: middle;
-	background: #ffa700;
+	background: #26759e;
 	color: white;
-	border: 0px;
+	border: 1px solid #1c5675;
 	border-radius: 5px;
-	box-shadow: inset 0px -3px 1px rgba(210, 117, 0, 0.9);
+	box-shadow: inset 0px -3px 1px #1c5675;
 	text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
 	transition: all 0.2s ease-in-out;
 }
@@ -127,7 +135,14 @@ body {
 }
 
 #submit-button:hover, button:hover {
-	background: #ffc400;
+	border:1px solid #1c5675;
+		 background-color: #26759e; background-image: -webkit-gradient(linear, left top, left bottom, from(#26759e), to(#133d5b));
+		 background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+		 background-image: -moz-linear-gradient(top, #26759e, #133d5b);
+		 background-image: -ms-linear-gradient(top, #26759e, #133d5b);
+		 background-image: -o-linear-gradient(top, #26759e, #133d5b);
+		 background-image: linear-gradient(to bottom, #26759e, #133d5b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#26759e, endColorstr=#133d5b);
+		color :white;
 }
 
 #submit-button:active, button:active {
@@ -146,7 +161,7 @@ input[type="checkbox"] {
 /* Overriding container css */
 .container {
 	margin: 0px !important;
-	padding-left: 20px !important;
+	padding-left: 150px !important;
 	box-sizing: border-box;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -157,6 +172,7 @@ input[type="checkbox"] {
 	height: calc(100% - 90px);
 	overflow-y: auto;
 }
+
 
 /************************
  
