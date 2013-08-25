@@ -24,6 +24,11 @@
 	src: url(fonts/Cabin-SemiBold.ttf);
 }
 
+html {
+	height: 100% !important;
+	position: relative !important;
+}
+
 body {
 	background: url(../images/g.png) no-repeat fixed left top;
 	overflow-x: hidden;
@@ -226,12 +231,14 @@ input[type="checkbox"] {
 *************************/
 #left_menu {
 	width: 250px;
-	min-height: -webkit-calc(100% - 45px);
+	/*min-height: -webkit-calc(100% - 45px);
 	min-height: -moz-calc(100% - 45px);
 	min-height: -o-calc(100% - 45px);
 	min-height: calc(100% - 45px);
-	max-height: calc(100% - 45px);
-	height: calc(100% - 45px);
+	max-height: calc(100% - 45px);*/
+	height: calc(100% - 96px);
+	position: absolute;
+	overflow: auto;
 	padding-top: 10px;
 	padding-left: 10px;
 	float: left;

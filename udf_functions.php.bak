@@ -342,25 +342,23 @@ if ( !defined('udf_functions') )
 
     function udf_admin_header()
     {
-        echo '<li id="5">'.msg('label_user_defined_fields').'</li>';
+        echo '<th bgcolor ="#FFA300"><font color="#FFFFFF">' .msg('label_user_defined_fields'). '</font></th>';
     }
 
     function udf_admin_menu($secureurl)
     {
-        echo '<ul id="Level-2-5" class="Level2" style="display:none">';
-        echo '<li id="5-1"><a href="'.$secureurl->encode('udf.php?submit=add&state=' . ($_REQUEST['state']+1)).'">' .msg('label_add'). '</a></li>';
-        echo '<li id="5-2"><a href="'.$secureurl->encode('udf.php?submit=deletepick&state=' . ($_REQUEST['state']+1)).'">' .msg('label_delete'). '</a></li>';
-        echo '';
+        echo '<td valign=top><table border=0>';
+        echo '<tr><td><b><a href="'.$secureurl->encode('udf.php?submit=add&state=' . ($_REQUEST['state']+1)).'">' .msg('label_add'). '</a></b></td></tr>';
+        echo '<tr><td><b><a href="'.$secureurl->encode('udf.php?submit=deletepick&state=' . ($_REQUEST['state']+1)).'">' .msg('label_delete'). '</a></b></td></tr>';
+        echo '<tr><td><hr></td></tr>';
         $query = "SELECT table_name,field_type,display_name FROM {$GLOBALS['CONFIG']['db_prefix']}udf ORDER BY id";
         $result = mysql_query($query) or die ("Error in query223: $query. " . mysql_error());
-		$i = 3;
         while ($row = mysql_fetch_row($result))
         {
-            echo '<li id="5-$i"><a href="'.$secureurl->encode('udf.php?submit=edit&udf='.$row[0].'&state=' . ($_REQUEST['state']+1)).'">'.$row[2].'</a></li>';
-			$i++;
+            echo '<tr><td><b><a href="'.$secureurl->encode('udf.php?submit=edit&udf='.$row[0].'&state=' . ($_REQUEST['state']+1)).'">'.$row[2].'</a></b></td></tr>';
         }
         mysql_free_result($result);
-        echo '</ul>';
+        echo '</table></td>';
     }
 
     function udf_functions_java_menu()

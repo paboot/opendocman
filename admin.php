@@ -45,7 +45,7 @@ $last_message = (isset($_REQUEST['last_message']) ? $_REQUEST['last_message'] : 
 draw_header(msg('label_admin'), $last_message);
 ?>
 	<!-- Left Menu -->
-	<section id="left_menu">
+	<section id="left_menu" <?php if (isset($_GET['last_message'])) echo 'style="height:calc(100% - 159px) !important"'; ?>>
 		<ul id="Level-1" class="Level1">
 			<!-- User Admin -->
 			<li id="1"><?php echo msg('users')?></li>
@@ -81,11 +81,10 @@ draw_header(msg('label_admin'), $last_message);
 				<li id="4-3"><a href="<?php echo $secureurl->encode('rejects.php?mode=root&state=' . ($_REQUEST['state']+1)); ?>"><?php echo msg('label_rejections')?></a></li>
 				<li id="4-4"><a href="<?php echo $secureurl->encode('check_exp.php?&state=' . ($_REQUEST['state']+1)); ?>"><?php echo msg('label_check_expiration')?></a></li>
 				<li id="4-5"><a href="<?php echo $secureurl->encode('file_ops.php?&state=' . ($_REQUEST['state']+1)); ?>&submit=view_checkedout"><?php echo msg('label_checked_out_files')?></a></li>
-				
 			</ul>
-			<?php /*
+			<?php
 				udf_admin_header();
-				udf_admin_menu($secureurl); */
+				udf_admin_menu($secureurl);
 			?>
 			<li id="6"><?php echo msg('label_settings')?></li>
 			<ul id="Level-2-6" class="Level2" style="display:none">
@@ -100,7 +99,7 @@ draw_header(msg('label_admin'), $last_message);
 			<?php
 			if(is_array($GLOBALS['plugin']->getPluginsList()) && $user_obj->isRoot()) {
 			?>
-			<li id="8"><?php echo msg('label_plugins')?></li>
+			<li id="8" style="border-bottom:none"><?php echo msg('label_plugins')?></li>
 			<?php callPluginMethod('onAdminMenu'); } ?>
 			<?php } ?>
 		</ul>

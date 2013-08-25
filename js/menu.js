@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$(".navbar .nav li:nth-child(3)").addClass("active");
 	} else if (loc == "add") {
 		$(".navbar .nav li:nth-child(4)").addClass("active");
-	} else {
+	} else if (loc != "profile" && loc != "error") {
 		$(".navbar .nav li:nth-child(5)").addClass("active");
 	}
 	
