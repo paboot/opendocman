@@ -276,13 +276,14 @@ if(!isset($_POST['submit']))
         <!-- Loading Authority radio_button group -->
         <TD><a class="body" href="help.html#Add_File_-_Authority" onClick="return popup(this, 'Help')" style="text-decoration:none"><?php echo msg('label_department_authority')?></a></td>
         <!-- <TD><a href="help.html" onClick="return popup(this, 'Help')">Authority</a></TD> -->
-        <TD>
+        <TD id="radbut">
                 <?php
                 $query = "SELECT RightId, Description FROM {$GLOBALS['CONFIG']['db_prefix']}rights order by RightId";
     $result = mysql_query($query, $GLOBALS['connection']) or die("Error in querry: $query. " . mysql_error());
     while(list($RightId, $Description) = mysql_fetch_row($result))
     {
-        echo msg('addpage_' . $Description) . '<input type ="radio" name ="' . $Description.'" value="' . $RightId . '" onClick="setData(this.name)"> |' . "\n";
+        /*echo '<input type ="radio" name ="' . $Description.'" value="' . $RightId . '" onClick="setData(this.name)"> ' . msg('addpage_' . $Description) . "<br>";*/
+		echo '<input type ="radio" name ="' . $Description.'" value="' . $RightId . '" id="' . $RightId . '" onClick="setData(this.name)"> ' . '<label for="' . $RightId . '">' . msg('addpage_' . $Description) . '</label>' ;
     }
     ?>
         <hr /></TD>
