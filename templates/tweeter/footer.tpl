@@ -19,10 +19,8 @@
             </a>-->
         <span id="footer-text">Copyright &copy; 2000-2013 Stephen Lawrence. Design by pdf</span>
         <ul id="footer-list">
-			<li><a href="http://www.opendocman.com/" target="_new">OpenDocMan v{$g_current_version}</a></li>
-            <li><a href="http://www.opendocman.com/forum/" target="_new">Support</a></li>
-            <li><a href="http://opendocman.uservoice.com" target="_new">Feedback</a></li>
-            <li><a href="https://github.com/opendocman/opendocman/issues" target="_new">Bugs</a></li>
+			<li><a href="http://www.opendocman.com/" target="_new">Intens Docs v1.0</a></li>
+            <li><a href="http://www.intens.co.id/" target="_new">Homepage</a></li>
         </ul>
       </footer>
     <script type="text/javascript" src="{$g_base_url}/templates/tweeter/js/bootstrap.min.js"></script>

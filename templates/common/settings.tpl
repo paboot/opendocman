@@ -48,16 +48,10 @@
                 <td><em>{$i.description}</em></td>
             </tr>
             {/foreach}
-                <td align="center">
-                    <div class="buttons">
-                        <button class="positive" type="submit" name="submit" value="Save">{$g_lang_button_save}</buttons>
-                    </div>
-                </td>
-                <td align="center">
-                    <div class="buttons">
-                        <button class="negative" type="submit" name="submit" value="Cancel">{$g_lang_button_cancel}</button>
-                    </div>
-                </td>
          </tr>
     </table>
+		<div class="settings_button">
+			<button class="positive" type="submit" name="submit" value="Save">{$g_lang_button_save}</buttons>
+			<button class="negative" type="submit" name="submit" value="Cancel">{$g_lang_button_cancel}</button>
+		</div>
         </form>

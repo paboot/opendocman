@@ -342,22 +342,44 @@ input[type="checkbox"] {
 
 /************************
  
+	   Admin Form
+ 
+*************************/
+.admin_form {
+	margin-left: 260px;
+}
+
+/************************
+ 
+	    Settings
+ 
+*************************/
+.settings_button {
+	width: 124px;
+	margin: auto;
+}
+
+.settings_button button {
+	margin: 0px 5px;
+}
+
+/************************
+ 
 	     Footer
  
 *************************/
-
 footer {
 	position: fixed;
 	bottom: 10px;
 	height: 40px;
 	width: 100%;
 	padding-top: 10px;
+	z-index: -2;
 }
 
 #footer-text {
 	position: relative;
 	color: #aaa;
-	width: 435px;
 	text-align: center;
 	left: 50%;
 	margin-left: -182px;
@@ -366,7 +388,7 @@ footer {
 #footer-list {
 	position: relative;
 	list-style-type: none;
-	width: 346px;
+	width: 202px;
 	margin: auto;
 }
 
