@@ -7,21 +7,27 @@
 @font-face
 {
 	font-family: Cabin;
-	src: url(fonts/Cabin-Regular.ttf);
+	src: url('fonts/Cabin-Regular.ttf');
 }
-
+/*
 @font-face
 {
 	font-family: Cabin;
 	font-weight: Bold;
-	src: url(fonts/Cabin-Bold.ttf);
+	src: url('fonts/Cabin-Bold.ttf');
 }
 
 @font-face
 {
 	font-family: Cabin;
 	font-weight: Medium;
-	src: url(fonts/Cabin-SemiBold.ttf);
+	src: url('fonts/Cabin-SemiBold.ttf');
+}*/
+
+@font-face
+{
+	font-family: Nevis;
+	src: url('fonts/Nevis.ttf');
 }
 
 html {
@@ -137,10 +143,15 @@ body {
 	box-shadow: 0 25px #42a5d4; /* Nilai 39 dari 80 (height) bagi 2 kurang 1 */
 }
 
+.mozilla_login {
+	width: 554px !important;
+}
+
 #login-form {
 	margin: auto;
 	margin-top: 20px;
 	width: 594px;
+	-moz-width: 494px;
 	border: 1px solid #bbb;
 	background: rgba(255,255,255,0.5);
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -233,6 +244,10 @@ input[type="checkbox"] {
 	box-sizing: border-box;
 	overflow-y: auto;
 	overflow-x: hidden;
+}
+
+.mozilla_container {
+	width: 1040px !important;
 }
 
 .container-wrapper {

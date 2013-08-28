@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="{$g_base_url}/js/jquery.js"></script>
 	<script type="text/javascript" src="{$g_base_url}/js/admin.js"></script>
 	<script type="text/javascript" src="{$g_base_url}/js/menu.js"></script>
+	<script type="text/javascript" src="{$g_base_url}/js/browser.js"></script>
 	
     <style type="text/css">
         {literal}

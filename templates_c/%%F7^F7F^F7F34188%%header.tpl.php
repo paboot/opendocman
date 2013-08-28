@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-23 18:14:32
+<?php /* Smarty version 2.6.26, created on 2013-08-28 03:14:32
          compiled from header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +26,8 @@
 /js/admin.js"></script>
 	<script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /js/menu.js"></script>
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>
+/js/browser.js"></script>
 	
     <style type="text/css">
         <?php echo '

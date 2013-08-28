@@ -9,7 +9,7 @@
     <link href="{$g_base_url}/templates/tweeter/css/bootstrap.css" rel="stylesheet">
     <link href="{$g_base_url}/templates/tweeter/css/tweeter.css" rel="stylesheet">
 	
-	<!-- Design by Pabot -->
+	<!-- Design by Pabot and Fandi -->
 	<link href="{$g_base_url}/css/main.css" rel="stylesheet">
 	
     <style type="text/css">
@@ -34,6 +34,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{$g_base_url}/templates/tweeter/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="{$g_base_url}/templates/tweeter/images/apple-touch-icon-114x114.png">
     
+	<script type="text/javascript" src="{$g_base_url}/js/jquery.js"></script>
+	<script type="text/javascript" src="{$g_base_url}/js/browser.js"></script>
+	
     
     {* Must Include This Section *}
     {include file='../../templates/common/head_include.tpl'}

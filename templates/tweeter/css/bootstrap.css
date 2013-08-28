@@ -3872,7 +3872,6 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
   color : #666a70;
   font-family: Nevis;
-  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 .navbar .nav .dropdown-toggle .caret {

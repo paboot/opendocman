@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-23 18:08:59
+<?php /* Smarty version 2.6.26, created on 2013-08-28 03:05:20
          compiled from login.tpl */ ?>
         <html>
         <head>
@@ -13,7 +13,7 @@
     <link href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/tweeter/css/tweeter.css" rel="stylesheet">
 	
-	<!-- Design by Pabot -->
+	<!-- Design by Pabot and Fandi -->
 	<link href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /css/main.css" rel="stylesheet">
 	
@@ -46,6 +46,11 @@
     <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /templates/tweeter/images/apple-touch-icon-114x114.png">
     
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>
+/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>
+/js/browser.js"></script>
+	
     
         <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => '../../templates/common/head_include.tpl', 'smarty_include_vars' => array()));
