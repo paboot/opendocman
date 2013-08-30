@@ -101,6 +101,7 @@ elseif( isset($_REQUEST['mode']) && $_REQUEST['mode'] == 'view_del_archive' )
     //$lfileobj_array = $luserperm_obj->convertToFileDataOBJ($array_id)
     
     draw_header(msg('area_deleted_files'), $last_message);
+	
     $page_url = $_SERVER['PHP_SELF'] . '?mode=' . $_REQUEST['mode'];
 
     $user_obj = new User($_SESSION['uid'], $GLOBALS['connection'], DB_NAME);

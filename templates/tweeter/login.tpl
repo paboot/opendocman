@@ -50,7 +50,7 @@
 		<div id="login-container">
 			<div id="login-logo">
 				<img src="images/bookthumb.png" alt="Site Logo" id="login-logo-book">
-				<img src="images/logo.gif" alt="Site Logo" id="login-logo-name">
+				<span id="logoname">Intens Docs</span>
 			</div>
 
 			<form action="index.php" method="post" id="login-form">

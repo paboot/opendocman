@@ -71,6 +71,7 @@
                     <a href="{$g_base_url}/admin.php">{$g_lang_label_admin}</a>
               </li>
               {/if}
+			  <li><a href="{$g_base_url}/docs/manual.php">Manual</a></li>
               <li><a href="{$g_base_url}/logout.php">{$g_lang_logout}</a></li>
             </ul>          
               <p class="navbar-text pull-right">

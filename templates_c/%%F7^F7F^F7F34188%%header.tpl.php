@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-28 03:14:32
+<?php /* Smarty version 2.6.26, created on 2013-08-30 12:15:31
          compiled from header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +104,8 @@ unset($_smarty_tpl_vars);
 </a>
               </li>
               <?php endif; ?>
+			  <li><a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
+/docs/manual.php">Manual</a></li>
               <li><a href="<?php echo $this->_tpl_vars['g_base_url']; ?>
 /logout.php"><?php echo $this->_tpl_vars['g_lang_logout']; ?>
 </a></li>

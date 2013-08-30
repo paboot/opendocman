@@ -17,10 +17,10 @@
           <!--<a href="http://www.opendocman.com/">
                 <img src="{$g_base_url}/images/logo.gif" title="{$site_title}" alt="{$site_title}" border="0">
             </a>-->
-        <span id="footer-text">Copyright &copy; 2000-2013 Stephen Lawrence. Design by pdf</span>
+        <span id="footer-text">Copyright &copy; 2013 Intens. Design by pdf</span>
         <ul id="footer-list">
-			<li><a href="http://www.opendocman.com/" target="_new">Intens Docs v1.0</a></li>
-            <li><a href="http://www.intens.co.id/" target="_new">Homepage</a></li>
+			<li><a href="http://www.intens.co.id/" target="_new">Intens Docs v1.0</a></li>
+            <!--<li><a href="http://www.intens.co.id/">Homepage</a></li>-->
         </ul>
       </footer>
     <script type="text/javascript" src="{$g_base_url}/templates/tweeter/js/bootstrap.min.js"></script>

@@ -1,4 +1,9 @@
 $(document).ready(function() {			
+	var url = document.URL;
+	var min = url.lastIndexOf("/");
+	var max = url.lastIndexOf(".php");
+	var loc = url.substring(min+1,max);
+	
 	// Left menu = terdiri dari 3 level
 	$('.Level1 li').on('click', function(){				// Selector untuk level pertama
 		var id = $(this).attr('id');
@@ -11,12 +16,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('.Level2 li a').on('click', function(){
-		var url = document.URL;
-		var min = url.lastIndexOf("/");
-		var max = url.lastIndexOf(".php");
-		var loc = url.substring(min+1,max);
-		
+	$('.Level2 li a').on('click', function(){		
 		if (loc == "user") {
 			var last_name = document.forms["add_user"]["last_name"].value;
 			var first_name = document.forms["add_user"]["first_name"].value;
@@ -50,4 +50,8 @@ $(document).ready(function() {
 			}
 		}
 	});
+	
+	if (loc != "index") {
+		$("footer").css("display","none");
+	}
 });

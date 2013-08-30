@@ -50,7 +50,67 @@ if(isset($_GET['submit']) && $_GET['submit'] == 'add')
     
     // Check to see if user is admin
     ?>
-<form id="udfAddForm" action="udf.php?last_message=<?php echo $last_message; ?>" method="GET" enctype="multipart/form-data">
+	<!-- Left Menu -->
+				<section id="left_menu" <?php if (isset($_GET['last_message'])) echo 'style="height:calc(100% - 159px) !important"'; ?>>
+					<ul id="Level-1" class="Level1">
+						<!-- User Admin -->
+						<li id="1"><?php echo msg('users')?></li>
+						<ul id="Level-2-1" class="Level2" style="display:none">
+							<li id="1-1"><a href="<?php echo $secureurl->encode('user.php?submit=adduser&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_add')?></a></li>
+							<li id="1-2"><a href="<?php echo $secureurl->encode('user.php?submit=deletepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete')?></a></li>
+							<li id="1-3"><a href="<?php echo $secureurl->encode('user.php?submit=updatepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_update')?></a></li>
+							<li id="1-4"><a href="<?php echo $secureurl->encode('user.php?submit=showpick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_display')?></a></li>
+						</ul>
+						<!-- Department Admin -->
+						<li id="2"><?php echo msg('label_department')?></li>
+						<ul id="Level-2-2" class="Level2" style="display:none">
+							<li id="2-1"><a href="<?php echo $secureurl->encode('department.php?submit=add&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_add')?></a></li>
+							<li id="2-2"><a href="<?php echo $secureurl->encode('department.php?submit=deletepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete')?></a></li>
+							<li id="2-3"><a href="<?php echo $secureurl->encode('department.php?submit=updatepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_update')?></a></li>
+							<li id="2-4"><a href="<?php echo $secureurl->encode('department.php?submit=showpick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_display')?></a></li>
+						</ul>
+						<!-- Category Admin -->
+						<li id="3"><?php echo msg('category')?></li>
+						<ul id="Level-2-3" class="Level2" style="display:none">
+							<li id="3-1"><a href="<?php echo $secureurl->encode('category.php?submit=add&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_add')?></a></li>
+							<li id="3-2"><a href="<?php echo $secureurl->encode('category.php?submit=deletepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete')?></a></li>
+							<li id="3-3"><a href="<?php echo $secureurl->encode('category.php?submit=updatepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_update')?></a></li>
+							<li id="3-4"><a href="<?php echo $secureurl->encode('category.php?submit=showpick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_display')?></a></li>
+						</ul>
+						<!-- Root-only Section -->
+						<?php if($user_obj->isRoot()) { ?>
+						<!-- File Admin -->
+						<li id="4"><?php echo msg('file')?></li>
+						<ul id="Level-2-4" class="Level2" style="display:none">
+							<li id="4-1"><a href="<?php echo $secureurl->encode('delete.php?mode=view_del_archive&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete_undelete')?></a></li>
+							<li id="4-2"><a href="<?php echo $secureurl->encode('toBePublished.php?mode=root&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_reviews')?></a></li>
+							<li id="4-3"><a href="<?php echo $secureurl->encode('rejects.php?mode=root&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_rejections')?></a></li>
+							<li id="4-4"><a href="<?php echo $secureurl->encode('check_exp.php?&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_check_expiration')?></a></li>
+							<li id="4-5"><a href="<?php echo $secureurl->encode('file_ops.php?&state=' . ($_REQUEST['state'])); ?>&submit=view_checkedout"><?php echo msg('label_checked_out_files')?></a></li>
+						</ul>
+						<?php
+							udf_admin_header();
+							udf_admin_menu($secureurl);
+						?>
+						<li id="6"><?php echo msg('label_settings')?></li>
+						<ul id="Level-2-6" class="Level2" style="display:none">
+							<li id="2-1"><a href="<?php echo $secureurl->encode('settings.php?submit=update&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('adminpage_edit_settings'); ?></a></li>
+							<li id="2-2"><a href="<?php echo $secureurl->encode('filetypes.php?submit=update&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('adminpage_edit_filetypes'); ?></a></li>
+						</ul>
+						<li id="7"><?php echo msg('adminpage_reports')?></li>
+						<ul id="Level-2-7" class="Level2" style="display:none">
+							<li id="2-1"><a href="<?php echo $secureurl->encode('access_log.php?submit=update&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('adminpage_access_log');?></a></li>
+							<li id="2-2"><a href="reports/file_list.php"><?php echo msg('adminpage_reports_file_list');?></a></li>
+						</ul>
+						<?php
+						if(is_array($GLOBALS['plugin']->getPluginsList()) && $user_obj->isRoot()) {
+						?>
+						<li id="8" style="border-bottom:none"><?php echo msg('label_plugins')?></li>
+						<?php callPluginMethod('onAdminMenu'); } ?>
+						<?php } ?>
+					</ul>
+				</section>
+<form id="udfAddForm" class="admin_form" action="udf.php?last_message=<?php echo $last_message; ?>" method="GET" enctype="multipart/form-data">
 <table border="0" cellspacing="5" cellpadding="5">
         <tr>
                 <td><b><?php echo msg('label_name')?>(limit 5)</b></td>
@@ -70,19 +130,9 @@ if(isset($_GET['submit']) && $_GET['submit'] == 'add')
                 </select>
                 </td>
         </tr>
-        <tr>
-            <td align="center">
-                <div class="buttons">
-                    <button class="positive" type="Submit" name="submit" value="Add User Defined Field"><?php echo msg('button_save')?></button>
-                </div>
-            </td>
-            <td align="center">
-                <div class="buttons">
-                    <button class="negative cancel" type="Submit" name="cancel" value="Cancel"><?php echo msg('button_cancel')?></button>
-                </div>
-            </td>
-        </tr>
     </table>
+	<button class="positive" type="Submit" name="submit" value="Add User Defined Field" style="margin-left: 105px;"><?php echo msg('button_save')?></button>
+	<button class="negative cancel" type="Submit" name="cancel" value="Cancel"><?php echo msg('button_cancel')?></button>
 </form>
     <script>
   $(document).ready(function(){
@@ -167,7 +217,67 @@ elseif(isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'deletepick')
     $deletepick='';
     draw_header(msg('select') . ' ' . msg('label_user_defined_fields'), $last_message);
     ?>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+		<!-- Left Menu -->
+				<section id="left_menu" <?php if (isset($_GET['last_message'])) echo 'style="height:calc(100% - 159px) !important"'; ?>>
+					<ul id="Level-1" class="Level1">
+						<!-- User Admin -->
+						<li id="1"><?php echo msg('users')?></li>
+						<ul id="Level-2-1" class="Level2" style="display:none">
+							<li id="1-1"><a href="<?php echo $secureurl->encode('user.php?submit=adduser&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_add')?></a></li>
+							<li id="1-2"><a href="<?php echo $secureurl->encode('user.php?submit=deletepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete')?></a></li>
+							<li id="1-3"><a href="<?php echo $secureurl->encode('user.php?submit=updatepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_update')?></a></li>
+							<li id="1-4"><a href="<?php echo $secureurl->encode('user.php?submit=showpick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_display')?></a></li>
+						</ul>
+						<!-- Department Admin -->
+						<li id="2"><?php echo msg('label_department')?></li>
+						<ul id="Level-2-2" class="Level2" style="display:none">
+							<li id="2-1"><a href="<?php echo $secureurl->encode('department.php?submit=add&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_add')?></a></li>
+							<li id="2-2"><a href="<?php echo $secureurl->encode('department.php?submit=deletepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete')?></a></li>
+							<li id="2-3"><a href="<?php echo $secureurl->encode('department.php?submit=updatepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_update')?></a></li>
+							<li id="2-4"><a href="<?php echo $secureurl->encode('department.php?submit=showpick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_display')?></a></li>
+						</ul>
+						<!-- Category Admin -->
+						<li id="3"><?php echo msg('category')?></li>
+						<ul id="Level-2-3" class="Level2" style="display:none">
+							<li id="3-1"><a href="<?php echo $secureurl->encode('category.php?submit=add&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_add')?></a></li>
+							<li id="3-2"><a href="<?php echo $secureurl->encode('category.php?submit=deletepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete')?></a></li>
+							<li id="3-3"><a href="<?php echo $secureurl->encode('category.php?submit=updatepick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_update')?></a></li>
+							<li id="3-4"><a href="<?php echo $secureurl->encode('category.php?submit=showpick&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_display')?></a></li>
+						</ul>
+						<!-- Root-only Section -->
+						<?php if($user_obj->isRoot()) { ?>
+						<!-- File Admin -->
+						<li id="4"><?php echo msg('file')?></li>
+						<ul id="Level-2-4" class="Level2" style="display:none">
+							<li id="4-1"><a href="<?php echo $secureurl->encode('delete.php?mode=view_del_archive&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_delete_undelete')?></a></li>
+							<li id="4-2"><a href="<?php echo $secureurl->encode('toBePublished.php?mode=root&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_reviews')?></a></li>
+							<li id="4-3"><a href="<?php echo $secureurl->encode('rejects.php?mode=root&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_rejections')?></a></li>
+							<li id="4-4"><a href="<?php echo $secureurl->encode('check_exp.php?&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('label_check_expiration')?></a></li>
+							<li id="4-5"><a href="<?php echo $secureurl->encode('file_ops.php?&state=' . ($_REQUEST['state'])); ?>&submit=view_checkedout"><?php echo msg('label_checked_out_files')?></a></li>
+						</ul>
+						<?php
+							udf_admin_header();
+							udf_admin_menu($secureurl);
+						?>
+						<li id="6"><?php echo msg('label_settings')?></li>
+						<ul id="Level-2-6" class="Level2" style="display:none">
+							<li id="2-1"><a href="<?php echo $secureurl->encode('settings.php?submit=update&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('adminpage_edit_settings'); ?></a></li>
+							<li id="2-2"><a href="<?php echo $secureurl->encode('filetypes.php?submit=update&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('adminpage_edit_filetypes'); ?></a></li>
+						</ul>
+						<li id="7"><?php echo msg('adminpage_reports')?></li>
+						<ul id="Level-2-7" class="Level2" style="display:none">
+							<li id="2-1"><a href="<?php echo $secureurl->encode('access_log.php?submit=update&state=' . ($_REQUEST['state'])); ?>"><?php echo msg('adminpage_access_log');?></a></li>
+							<li id="2-2"><a href="reports/file_list.php"><?php echo msg('adminpage_reports_file_list');?></a></li>
+						</ul>
+						<?php
+						if(is_array($GLOBALS['plugin']->getPluginsList()) && $user_obj->isRoot()) {
+						?>
+						<li id="8" style="border-bottom:none"><?php echo msg('label_plugins')?></li>
+						<?php callPluginMethod('onAdminMenu'); } ?>
+						<?php } ?>
+					</ul>
+				</section>
+        <form class="admin_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
         <table border="0" cellspacing="5" cellpadding="5">
 
         <input type="hidden" name="state" value="<?php echo ($_REQUEST['state']+1); ?>">

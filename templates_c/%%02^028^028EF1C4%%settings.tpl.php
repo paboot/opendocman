@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-26 16:40:30
+<?php /* Smarty version 2.6.26, created on 2013-08-30 12:38:14
          compiled from C:%5Cxampp%5Chtdocs%5Copendocman//templates/common/settings.tpl */ ?>
         <form action="settings.php" method="POST" enctype="multipart/form-data" id="settingsForm">    
         <table class="form-table">        

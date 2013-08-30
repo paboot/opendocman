@@ -288,7 +288,8 @@ if (!isset($_REQUEST['submit']))
       	$result = mysql_query($query, $GLOBALS['connection']) or die("Error in querry: $query. " . mysql_error());
       	while(list($RightId, $Description) = mysql_fetch_row($result))
       	{
-      		echo msg('editpage_' . $Description) . ' <input type="radio" name="' . $Description . '" value="' . $RightId . '" onClick="setData(this.name)"> | ' . "\n";
+      		/*echo msg('editpage_' . $Description) . ' <input type="radio" name="' . $Description . '" value="' . $RightId . '" onClick="setData(this.name)"> | ' . "\n";*/
+			echo '<input type ="radio" name ="' . $Description.'" value="' . $RightId . '" id="' . $RightId . '" onClick="setData(this.name)"> ' . '<label for="' . $RightId . '">' . msg('addpage_' . $Description) . '</label>' ;
       	}
      
 	$query = "SELECT {$GLOBALS['CONFIG']['db_prefix']}department.name, {$GLOBALS['CONFIG']['db_prefix']}dept_perms.dept_id, {$GLOBALS['CONFIG']['db_prefix']}dept_perms.rights FROM {$GLOBALS['CONFIG']['db_prefix']}dept_perms, {$GLOBALS['CONFIG']['db_prefix']}department WHERE {$GLOBALS['CONFIG']['db_prefix']}dept_perms.dept_id = {$GLOBALS['CONFIG']['db_prefix']}department.id and fid = ".$filedata->getId()." ORDER BY name";

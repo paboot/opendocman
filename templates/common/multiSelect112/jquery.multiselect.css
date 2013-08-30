@@ -1,4 +1,4 @@
-.ui-multiselect { padding:2px 0 2px 4px; text-align:left; background:whitesmoke }
+.ui-multiselect { padding:2px 0 2px 4px; text-align:left; background:whitesmoke; width: 202px !important;}
 .ui-multiselect:hover {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#26759e), to(#133d5b));
 	background-image: -webkit-linear-gradient(top, #133d5b, #26759e);

@@ -1,4 +1,4 @@
-<div id="filetable_wrapper">
+<div id="filetable_wrapper" style="margin-left: 260px">
 <form name="table" method="post" action="{$smarty.server.PHP_SELF}">
     <table id="filetable" class="display" border="0" cellpadding="1" cellspacing="1">
     <thead>

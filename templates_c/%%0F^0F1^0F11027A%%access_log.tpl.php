@@ -1,6 +1,6 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-23 18:12:26
+<?php /* Smarty version 2.6.26, created on 2013-08-30 12:42:02
          compiled from C:%5Cxampp%5Chtdocs%5Copendocman//templates/common/access_log.tpl */ ?>
-<div id="filetable_wrapper">
+<div id="filetable_wrapper" style="margin-left: 260px">
 <form name="table" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>
 ">
     <table id="filetable" class="display" border="0" cellpadding="1" cellspacing="1">

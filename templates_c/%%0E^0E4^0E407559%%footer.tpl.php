@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-26 16:33:37
+<?php /* Smarty version 2.6.26, created on 2013-08-29 10:24:16
          compiled from footer.tpl */ ?>
 <?php if ($this->_tpl_vars['g_demo'] == 'True'): ?>
 <script type="text/javascript"><!--
@@ -22,10 +22,10 @@
 " alt="<?php echo $this->_tpl_vars['site_title']; ?>
 " border="0">
             </a>-->
-        <span id="footer-text">Copyright &copy; 2000-2013 Stephen Lawrence. Design by pdf</span>
+        <span id="footer-text">Copyright &copy; 2013 Intens. Design by pdf</span>
         <ul id="footer-list">
-			<li><a href="http://www.opendocman.com/" target="_new">Intens Docs v1.0</a></li>
-            <li><a href="http://www.intens.co.id/" target="_new">Homepage</a></li>
+			<li><a href="http://www.intens.co.id/" target="_new">Intens Docs v1.0</a></li>
+            <!--<li><a href="http://www.intens.co.id/">Homepage</a></li>-->
         </ul>
       </footer>
     <script type="text/javascript" src="<?php echo $this->_tpl_vars['g_base_url']; ?>

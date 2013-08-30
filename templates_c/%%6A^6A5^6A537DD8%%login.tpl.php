@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-28 03:05:20
+<?php /* Smarty version 2.6.26, created on 2013-08-29 04:42:09
          compiled from login.tpl */ ?>
         <html>
         <head>
@@ -68,7 +68,7 @@ unset($_smarty_tpl_vars);
 		<div id="login-container">
 			<div id="login-logo">
 				<img src="images/bookthumb.png" alt="Site Logo" id="login-logo-book">
-				<img src="images/logo.gif" alt="Site Logo" id="login-logo-name">
+				<span id="logoname">Intens Docs</span>
 			</div>
 
 			<form action="index.php" method="post" id="login-form">
