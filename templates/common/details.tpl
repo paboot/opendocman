@@ -1,47 +1,52 @@
 <table border="0" width=100% cellspacing="4" cellpadding="1">
-    <form name="data">
-        <input type="hidden" name="to" value="{$file_detail.to_value}" />
-        <input type="hidden" name="subject" value="{$file_detail.subject_value}" />
-        <input type="hidden" name="comments" value="{$file_detail.comments_value}" />
-    </FORM>
-    <tr>
-        <td align="right">
+    <br>
+	<tr >
+        <td id="Judul"align="left">
             {if $file_detail.file_unlocked }
                 <img src="images/file_unlocked.png" alt="" border="0" align="absmiddle">
             {else}
                 <img src="images/file_locked.png" alt="" border="0" align="absmiddle">
             {/if}
-        </td>
-        <td align="left">
+        <!--</td>
+        <td align="left"> -->
             <font size="+1">{$file_detail.realname}</font>
         </td>
     </tr>
+</table>
+
+<table border="0" width=100% cellspacing="4" cellpadding="1">
+    <form name="data">
+        <input type="hidden" name="to" value="{$file_detail.to_value}" />
+        <input type="hidden" name="subject" value="{$file_detail.subject_value}" />
+        <input type="hidden" name="comments" value="{$file_detail.comments_value}" />
+    </FORM>
+    <br>
     <tr>
-        <th valign=top align=right>{$g_lang_category}:</th><td>{$file_detail.category}</td>
+        <th valign=top align=left style="width: 220px">{$g_lang_category}</th><td><span style="font-weight: bold" > :  </span>{$file_detail.category}</td>
     </tr>
 
     {$file_detail.udf_details_display}
 
     <tr>
-        <th valign=top align=right>{$g_lang_label_size}:</th><td>{$file_detail.filesize}</td>
+        <th valign=top align=left >{$g_lang_label_size}</th><td><span style="font-weight: bold" > :  </span>{$file_detail.filesize}</td>
     </tr>
     <tr>
-        <th valign=top align=right>{$g_lang_label_created_date}:</th><td> {$file_detail.created}</td>
+        <th valign=top align=left>{$g_lang_label_created_date}</th><td><span style="font-weight: bold" > :  </span>{$file_detail.created}</td>
     </tr>
     <tr>
-        <th valign=top align=right>{$g_lang_owner}:</th>
+        <th valign=top align=left>{$g_lang_owner}</th>
         <td>
-            <a href="mailto:{$file_detail.owner_email}?Subject=Regarding%20your%20document:{$file_detail.realname}&Body=Hello%20{$file_detail.owner_fullname}"> {$file_detail.owner}</a>
+            <span style="font-weight: bold" > :  </span> <a href="mailto:{$file_detail.owner_email}?Subject=Regarding%20your%20document:{$file_detail.realname}&Body=Hello%20{$file_detail.owner_fullname}"> {$file_detail.owner}</a>
         </td>
     </tr>
     <tr>
-        <th valign=top align=right>{$g_lang_label_description}:</th><td> {$file_detail.description}</td>
+        <th valign=top align=left>{$g_lang_label_description}</th><td> <span style="font-weight: bold" > :  </span> {$file_detail.description}</td>
     </tr>
     <tr>
-        <th valign=top align=right>{$g_lang_label_comment}:</th><td> {$file_detail.comment}</td>
+        <th valign=top align=left>{$g_lang_label_comment}</th><td> <span style="font-weight: bold" > :  </span> {$file_detail.comment}</td>
     </tr>
     <tr>
-        <th valign=top align=right>{$g_lang_revision}:</th><td> <div id="details_revision">{$file_detail.revision}</div></td>
+        <th valign=top align=left>{$g_lang_revision}</th><td> <div id="details_revision"> <span style="font-weight: bold" > :  </span> {$file_detail.revision}</div></td>
     </tr>
 {if $file_detail.file_under_review}
     <tr>

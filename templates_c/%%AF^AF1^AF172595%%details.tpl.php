@@ -1,5 +1,22 @@
-<?php /* Smarty version 2.6.26, created on 2013-08-29 10:28:09
+<?php /* Smarty version 2.6.26, created on 2013-09-02 04:30:13
          compiled from C:%5Cxampp%5Chtdocs%5Copendocman//templates/common/details.tpl */ ?>
+<table border="0" width=100% cellspacing="4" cellpadding="1">
+    <br>
+	<tr >
+        <td id="Judul"align="left">
+            <?php if ($this->_tpl_vars['file_detail']['file_unlocked']): ?>
+                <img src="images/file_unlocked.png" alt="" border="0" align="absmiddle">
+            <?php else: ?>
+                <img src="images/file_locked.png" alt="" border="0" align="absmiddle">
+            <?php endif; ?>
+        <!--</td>
+        <td align="left"> -->
+            <font size="+1"><?php echo $this->_tpl_vars['file_detail']['realname']; ?>
+</font>
+        </td>
+    </tr>
+</table>
+
 <table border="0" width=100% cellspacing="4" cellpadding="1">
     <form name="data">
         <input type="hidden" name="to" value="<?php echo $this->_tpl_vars['file_detail']['to_value']; ?>
@@ -9,22 +26,10 @@
         <input type="hidden" name="comments" value="<?php echo $this->_tpl_vars['file_detail']['comments_value']; ?>
 " />
     </FORM>
+    <br>
     <tr>
-        <td align="right">
-            <?php if ($this->_tpl_vars['file_detail']['file_unlocked']): ?>
-                <img src="images/file_unlocked.png" alt="" border="0" align="absmiddle">
-            <?php else: ?>
-                <img src="images/file_locked.png" alt="" border="0" align="absmiddle">
-            <?php endif; ?>
-        </td>
-        <td align="left">
-            <font size="+1"><?php echo $this->_tpl_vars['file_detail']['realname']; ?>
-</font>
-        </td>
-    </tr>
-    <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_category']; ?>
-:</th><td><?php echo $this->_tpl_vars['file_detail']['category']; ?>
+        <th valign=top align=left style="width: 220px"><?php echo $this->_tpl_vars['g_lang_category']; ?>
+</th><td><span style="font-weight: bold" > :  </span><?php echo $this->_tpl_vars['file_detail']['category']; ?>
 </td>
     </tr>
 
@@ -32,20 +37,20 @@
 
 
     <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_label_size']; ?>
-:</th><td><?php echo $this->_tpl_vars['file_detail']['filesize']; ?>
+        <th valign=top align=left ><?php echo $this->_tpl_vars['g_lang_label_size']; ?>
+</th><td><span style="font-weight: bold" > :  </span><?php echo $this->_tpl_vars['file_detail']['filesize']; ?>
 </td>
     </tr>
     <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_label_created_date']; ?>
-:</th><td> <?php echo $this->_tpl_vars['file_detail']['created']; ?>
+        <th valign=top align=left><?php echo $this->_tpl_vars['g_lang_label_created_date']; ?>
+</th><td><span style="font-weight: bold" > :  </span><?php echo $this->_tpl_vars['file_detail']['created']; ?>
 </td>
     </tr>
     <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_owner']; ?>
-:</th>
+        <th valign=top align=left><?php echo $this->_tpl_vars['g_lang_owner']; ?>
+</th>
         <td>
-            <a href="mailto:<?php echo $this->_tpl_vars['file_detail']['owner_email']; ?>
+            <span style="font-weight: bold" > :  </span> <a href="mailto:<?php echo $this->_tpl_vars['file_detail']['owner_email']; ?>
 ?Subject=Regarding%20your%20document:<?php echo $this->_tpl_vars['file_detail']['realname']; ?>
 &Body=Hello%20<?php echo $this->_tpl_vars['file_detail']['owner_fullname']; ?>
 "> <?php echo $this->_tpl_vars['file_detail']['owner']; ?>
@@ -53,18 +58,18 @@
         </td>
     </tr>
     <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_label_description']; ?>
-:</th><td> <?php echo $this->_tpl_vars['file_detail']['description']; ?>
+        <th valign=top align=left><?php echo $this->_tpl_vars['g_lang_label_description']; ?>
+</th><td> <span style="font-weight: bold" > :  </span> <?php echo $this->_tpl_vars['file_detail']['description']; ?>
 </td>
     </tr>
     <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_label_comment']; ?>
-:</th><td> <?php echo $this->_tpl_vars['file_detail']['comment']; ?>
+        <th valign=top align=left><?php echo $this->_tpl_vars['g_lang_label_comment']; ?>
+</th><td> <span style="font-weight: bold" > :  </span> <?php echo $this->_tpl_vars['file_detail']['comment']; ?>
 </td>
     </tr>
     <tr>
-        <th valign=top align=right><?php echo $this->_tpl_vars['g_lang_revision']; ?>
-:</th><td> <div id="details_revision"><?php echo $this->_tpl_vars['file_detail']['revision']; ?>
+        <th valign=top align=left><?php echo $this->_tpl_vars['g_lang_revision']; ?>
+</th><td> <div id="details_revision"> <span style="font-weight: bold" > :  </span> <?php echo $this->_tpl_vars['file_detail']['revision']; ?>
 </div></td>
     </tr>
 <?php if ($this->_tpl_vars['file_detail']['file_under_review']): ?>
